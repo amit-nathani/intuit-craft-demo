@@ -1,5 +1,7 @@
 # intuit-craft-demo
 
+![alt text](https://github.com/amit-nathani/intuit-craft-demo/blob/master/docs/craft_demo_architecture.jpeg)
+
 Please refer to config directory for all configurations for Kafka and Hadoop setup
 
 ## Start Kafka
