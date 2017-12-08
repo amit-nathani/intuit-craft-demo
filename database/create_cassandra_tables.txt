@@ -1,0 +1,32 @@
+CREATE KEYSPACE trial_batch_view WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1}  AND durable_writes = true;
+
+CREATE KEYSPACE trial_real_time_view WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1}  AND durable_writes = true;
+
+CREATE TABLE account_created (
+    item text,
+    created_at timestamp,
+    created_date text,
+    company_id text,
+    PRIMARY KEY ((item, created_date), created_at)
+) WITH CLUSTERING ORDER BY (created_at DESC);
+
+
+CREATE TABLE account_expiring (
+    item text,
+    created_date text,
+    company_id text,
+    company_email text,
+    expiration_ts timestamp,
+    PRIMARY KEY ((item, created_date), expiration_ts)
+) WITH CLUSTERING ORDER BY (expiration_ts DESC);
+
+
+CREATE TABLE sales (
+    item text,
+    created_at timestamp,
+    created_date text,
+    company_id text,
+    channel text,
+    sales double,
+    PRIMARY KEY ((item, channel, created_date), created_at)
+) WITH CLUSTERING ORDER BY (created_at DESC);

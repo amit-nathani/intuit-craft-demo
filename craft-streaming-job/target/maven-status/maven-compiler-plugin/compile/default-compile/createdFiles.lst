@@ -1,0 +1,4 @@
+com\intuit\craft\streaming\cassandra\tables\Sales.class
+com\intuit\craft\streaming\job\TrialStreamingJob.class
+com\intuit\craft\streaming\cassandra\tables\AccountCreated.class
+com\intuit\craft\streaming\job\TrialStreamingJob$1.class

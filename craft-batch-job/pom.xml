@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+
+<parent>
+    <artifactId>intuit-craft-demo</artifactId>
+    <groupId>com.intuit</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>craft-batch-job</artifactId>
+
+<repositories>
+  <!-- list of other repositories -->
+  <repository>
+    <id>SparkPackagesRepo</id>
+    <url>http://dl.bintray.com/spark-packages/maven</url>
+  </repository>
+</repositories> 
+
+<dependencies>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.6.0</version> 
+</dependency>
+
+<dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.7.0</version>
+    </dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-core_2.11</artifactId>
+    <version>2.1.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-sql_2.11</artifactId>
+    <version>2.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-tags -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-tags_2.11</artifactId>
+    <version>2.1.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-hive_2.11</artifactId>
+    <version>2.1.0</version>
+    <scope>provided</scope>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hivecontext-compatibility -->
+<!--  <dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-hivecontext-compatibility_2.11</artifactId>
+    <version>2.0.0-preview</version>
+</dependency> -->
+
+<dependency>
+            <groupId>org.apache.calcite</groupId>
+            <artifactId>calcite-avatica</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.calcite</groupId>
+            <artifactId>calcite-core</artifactId>
+            <version>1.12.0</version>
+        </dependency>
+
+  <dependency>
+            <groupId>org.spark-project.hive</groupId>
+            <artifactId>hive-exec</artifactId>
+            <version>1.2.1.spark2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spark-project.hive</groupId>
+            <artifactId>hive-metastore</artifactId>
+            <version>1.2.1.spark2</version>
+        </dependency>
+
+      <!-- <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency> -->
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-common -->
+<dependency>
+    <groupId>org.apache.hive</groupId>
+    <artifactId>hive-common</artifactId>
+    <version>2.3.0</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.apache.hive</groupId>
+    <artifactId>hive-exec</artifactId>
+    <version>2.3.0</version>
+</dependency>
+               
+  <!-- list of dependencies -->
+  <!-- https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector -->
+<dependency>
+    <groupId>com.datastax.spark</groupId>
+    <artifactId>spark-cassandra-connector_2.11</artifactId>
+    <version>2.0.5</version>
+</dependency>
+
+  
+  <!-- https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector-java -->
+<dependency>
+    <groupId>com.datastax.spark</groupId>
+    <artifactId>spark-cassandra-connector-java_2.11</artifactId>
+    <version>1.6.0-M1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-streaming_2.11</artifactId>
+    <version>2.2.0</version>
+    <scope>provided</scope>
+</dependency>
+  
+   
+</dependencies>
+
+
+
+<build>
+<plugins>
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.7.0</version>
+  <configuration>
+    <source>1.8</source>
+    <target>1.8</target>
+  </configuration>
+</plugin>
+</plugins>
+</build>
+
+</project>
+
