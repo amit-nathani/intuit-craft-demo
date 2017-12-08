@@ -36,6 +36,9 @@ Copy mysql-connector-java-5.1.45-bin.jar in hive/lib directory and run below men
 
 `hive`
 
+## Spark setup
+Install spark 2.1.0. Please add appropriate environment variables and configuration. Please copy hive-site.xml into Spark configuration folder.
+
 ## Cassandra setup
 Start cassandra server. 
 
