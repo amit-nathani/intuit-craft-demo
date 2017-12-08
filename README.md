@@ -65,5 +65,24 @@ Run com.intuit.craft.streaming.TrialStreamingJob class to run Streaming job whic
 ##### Run batch job
 Run com.intuit.craft.streaming.TrialBatchJob class to run Streaming job which reads events from Kafka and pushes those to Cassandra realtime view
 
+## Cassandra Data Modeling
 
+##### Table: account_created
+It is created to address below mentioned queries:
+
+1. Find companies for a particular (type,item)
+2. Find X newest(within few days) companies for a particular (type,item)
+
+##### Table: account_Expiring
+It is created to address below mentioned queries:
+
+1. Find all companies or company_email for which the subscription is expiring within few hours/minutes/days
+
+##### Table: sales
+It is created to address below mentioned queries:
+
+1. Find highest selling item this month on all channels (or on web channel)
+2. Find highest selling item for whole year
+3. find sell of various items on web channel in last one month
+4. Find total business done on web channel in last one month
 
